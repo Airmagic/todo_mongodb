@@ -3,6 +3,7 @@ var ObjectID = require('mongodb').ObjectID;
 
 var router = express.Router();
 
+
 /* GET home page with all incomplete tasks */
 router.get('/', function(req, res, next) {
   
@@ -62,7 +63,7 @@ router.post('/add', function(req, res, next){
   
   if (!req.body || !req.body.text) {
     //no task text info, redirect to home page with flash message
-    req.flash('error', 'please enter a task');
+    req.flash('error', 'Where\'s the beef?');
     res.redirect('/');
   }
   
